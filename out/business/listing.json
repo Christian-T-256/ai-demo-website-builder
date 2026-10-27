@@ -1,0 +1,115 @@
+{
+  "address": "18 Example Lane, Harbor Hollow, NY 00000",
+  "category": "Neighborhood bakery",
+  "description": "Small batch bread, laminated pastries, and coffee baked fresh for Harbor Hollow each morning.",
+  "fixture_type": "fictional",
+  "hours": [
+    {
+      "day": "Monday",
+      "hours": "Closed"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "7:00 AM to 3:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "7:00 AM to 3:00 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "7:00 AM to 3:00 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "7:00 AM to 4:00 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "8:00 AM to 4:00 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "8:00 AM to 2:00 PM"
+    }
+  ],
+  "name": "Northwind Bakery",
+  "phone": "+1 212-555-0148",
+  "photos": [
+    {
+      "alt": "Abstract warm toned placeholder for a bakery oven",
+      "color_end": "#efb85f",
+      "color_start": "#c75f46",
+      "label": "Morning bake"
+    },
+    {
+      "alt": "Abstract green and cream placeholder for a bread display",
+      "color_end": "#7a9c6f",
+      "color_start": "#21483e",
+      "label": "Bread shelf"
+    },
+    {
+      "alt": "Abstract rose and wheat placeholder for a pastry case",
+      "color_end": "#e9b86d",
+      "color_start": "#a84f5b",
+      "label": "Pastry case"
+    },
+    {
+      "alt": "Abstract dark green placeholder for a coffee counter",
+      "color_end": "#597b67",
+      "color_start": "#122d27",
+      "label": "Coffee counter"
+    },
+    {
+      "alt": "Abstract coral and cream placeholder for a pastry box",
+      "color_end": "#f0d7a1",
+      "color_start": "#d36f51",
+      "label": "Weekend box"
+    }
+  ],
+  "public_url": "https://demo.example.com/business",
+  "rating": 4.9,
+  "review_count": 184,
+  "reviews": [
+    {
+      "author": "Maya R.",
+      "quote": "The rye loaf has a deep crust and stays tender for days. The counter team remembered my order on my second visit."
+    },
+    {
+      "author": "Theo B.",
+      "quote": "Come early for the pear danish. The pastry is crisp, the filling is bright, and the coffee is excellent."
+    },
+    {
+      "author": "Nina K.",
+      "quote": "They made a small birthday cake that looked clean, tasted fresh, and felt right for the occasion."
+    }
+  ],
+  "services": [
+    {
+      "description": "Naturally leavened bread with a dark crust and soft crumb.",
+      "name": "Country loaves"
+    },
+    {
+      "description": "Croissants, morning buns, and seasonal fruit danishes.",
+      "name": "Morning pastry"
+    },
+    {
+      "description": "Small custom cakes with simple finishes and bright flavors.",
+      "name": "Celebration cakes"
+    },
+    {
+      "description": "Espresso, pour over coffee, tea, and house made syrups.",
+      "name": "Coffee counter"
+    },
+    {
+      "description": "Savory hand pies, focaccia slices, and fresh soup.",
+      "name": "Lunch bakes"
+    },
+    {
+      "description": "A rotating pastry box for pickup on Saturday and Sunday.",
+      "name": "Weekend boxes"
+    }
+  ],
+  "tagline": "Slow mornings start with something warm.",
+  "town": "Harbor Hollow"
+}

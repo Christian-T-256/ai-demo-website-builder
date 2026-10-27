@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{FIRST_NAME}}, a page for {{COMPANY}}</title>
+  <meta name="description" content="A fictional per-prospect landing page generated from structured JSON.">
+  <style>
+    :root { --navy:#101d2b; --slate:#6f7d8c; --paper:#f3f0e8; --lime:#d8f26a; --blue:#5b8cff; --white:#fff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--navy); background:var(--paper); font-family:ui-sans-serif,system-ui,sans-serif; line-height:1.55; }
+    a { color:inherit; }
+    a[href],button { display:inline-flex; min-width:44px; min-height:44px; align-items:center; justify-content:center; -webkit-tap-highlight-color:transparent; }
+    .topline { padding:12px 20px; color:#c8d2dc; background:var(--navy); font-size:12px; letter-spacing:.1em; text-align:center; text-transform:uppercase; }
+    .hero { display:grid; min-height:680px; align-items:center; padding:72px 20px; color:var(--white); background:radial-gradient(circle at 85% 15%, rgba(91,140,255,.45), transparent 33%), var(--navy); }
+    .wrap { width:min(1080px,100%); margin:0 auto; }
+    .eyebrow { margin-bottom:18px; color:var(--lime); font-size:12px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:840px; margin-bottom:22px; font-family:Georgia,serif; font-size:clamp(45px,12vw,88px); font-weight:500; letter-spacing:-.045em; line-height:.98; }
+    .hero p { max-width:660px; margin-bottom:30px; color:#bdc9d5; font-size:19px; }
+    .identity { display:flex; flex-wrap:wrap; gap:10px; }
+    .identity span { padding:9px 14px; border:1px solid rgba(255,255,255,.18); border-radius:999px; color:#dbe3eb; font-size:12px; }
+    .section { padding:74px 20px; }
+    .context { max-width:760px; margin-bottom:48px; font-family:Georgia,serif; font-size:clamp(26px,6vw,42px); line-height:1.25; }
+    .observations { display:grid; gap:14px; }
+    .observation { min-height:230px; padding:26px; border:1px solid #d8d4ca; border-radius:24px; background:rgba(255,255,255,.65); }
+    .observation > span { color:var(--blue); font-size:12px; font-weight:900; }
+    .observation h2 { margin:58px 0 10px; font-family:Georgia,serif; font-size:27px; }
+    .observation p { margin-bottom:0; color:#536272; }
+    .recommendation { color:var(--white); background:var(--blue); }
+    .recommendation-card { padding:34px; border:1px solid rgba(255,255,255,.24); border-radius:28px; background:rgba(16,29,43,.18); }
+    .recommendation-card h2 { font-family:Georgia,serif; font-size:clamp(38px,8vw,62px); font-weight:500; letter-spacing:-.035em; line-height:1.02; }
+    .recommendation-card p { max-width:680px; margin-bottom:30px; color:#eef3ff; font-size:18px; }
+    .cta { display:inline-flex; min-height:50px; align-items:center; justify-content:center; padding:0 24px; border-radius:999px; color:var(--navy); background:var(--lime); font-weight:900; text-decoration:none; }
+    footer { padding:38px 20px 96px; color:#9aabba; background:var(--navy); font-size:13px; }
+    .sticky-cta { position:sticky; z-index:5; bottom:12px; display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(680px,calc(100% - 24px)); margin:0 auto 12px; padding:10px 10px 10px 18px; border:1px solid rgba(255,255,255,.18); border-radius:999px; color:var(--white); background:rgba(16,29,43,.92); box-shadow:0 18px 44px rgba(16,29,43,.28); backdrop-filter:blur(14px); }
+    .sticky-cta span { overflow:hidden; font-size:12px; font-weight:800; text-overflow:ellipsis; white-space:nowrap; }
+    .sticky-cta .cta { min-height:44px; flex:0 0 auto; padding:0 18px; font-size:12px; }
+    .reveal { opacity:1; transform:none; }
+    .js .reveal { opacity:0; transform:translateY(18px); transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1); }
+    .js .reveal.visible { opacity:1; transform:none; }
+    @media (min-width:760px) { .hero { padding:100px 5vw; } .section { padding:110px 5vw; } .observations { grid-template-columns:repeat(3,1fr); } .recommendation-card { padding:64px; } }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none} }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="topline">Fictional prospect fixture | Local preview only</div>
+  <main>
+    <section class="hero">
+      <div class="wrap reveal">
+        <div class="eyebrow">Prepared for {{FIRST_NAME}} at {{COMPANY}}</div>
+        <h1>{{HEADLINE}}</h1>
+        <p>{{SUBHEAD}}</p>
+        <div class="identity">
+          <span>{{FIRST_NAME}} {{LAST_NAME}}</span>
+          <span>{{ROLE}}</span>
+          <span>{{COMPANY}}</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <p class="context reveal">{{CONTEXT}}</p>
+        <div class="observations">{{OBSERVATIONS}}</div>
+      </div>
+    </section>
+    <section class="section recommendation">
+      <div class="wrap recommendation-card reveal">
+        <div class="eyebrow">Recommendation</div>
+        <h2>{{RECOMMENDATION_TITLE}}</h2>
+        <p>{{RECOMMENDATION_BODY}}</p>
+        <a class="cta" href="{{CTA_URL}}" rel="noopener">{{CTA_LABEL}}</a>
+      </div>
+    </section>
+  </main>
+  <div class="sticky-cta">
+    <span>Built for {{FIRST_NAME}} at {{COMPANY}}</span>
+    <a class="cta" href="{{CTA_URL}}" rel="noopener">{{CTA_LABEL}}</a>
+  </div>
+  <footer>
+    Fictional person, company, and observations. Generated for a public engineering portfolio.
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>

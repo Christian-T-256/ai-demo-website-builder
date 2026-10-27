@@ -1,0 +1,19 @@
+{
+  "fixture_type": "fictional",
+  "first_name": "Jamie",
+  "last_name": "Rivera",
+  "company_name": "Northwind Dental",
+  "role": "Operations Director",
+  "headline": "A clearer first visit for every new patient.",
+  "subhead": "This sample page turns three public facing observations into one focused recommendation for the practice.",
+  "context": "Jamie, the practice already explains its care philosophy well. The next opportunity is to make the path from first question to booked visit easier to follow on a phone.",
+  "observations": [
+    {"title": "Strong patient language", "detail": "The practice description sounds calm and specific, which gives the page a useful voice to build from."},
+    {"title": "Scattered next steps", "detail": "New patients have several links to choose from before they know which action fits their situation."},
+    {"title": "Mobile trust gap", "detail": "Hours, insurance guidance, and first visit details can sit closer to the main booking action."}
+  ],
+  "recommendation_title": "Build one guided path for new patients.",
+  "recommendation_body": "Lead with the practice promise, answer the three questions patients ask first, and keep one booking action visible as they scroll. The result is a page the front desk can send after any inquiry.",
+  "cta_label": "Start a conversation",
+  "cta_url": "https://calendar.example.com/jamie-demo"
+}

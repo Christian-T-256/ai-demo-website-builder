@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Bread shelf</title>
+  <desc id="desc">Abstract green and cream placeholder for a bread display. Fictional placeholder artwork.</desc>
+  <rect width="1600" height="1100" fill="#21483e"/>
+  <path d="M0 880 L760 0 H1600 V360 L940 1100 H0 Z" fill="#7a9c6f" fill-opacity=".56"/>
+  <circle cx="510" cy="310" r="260" fill="#ffffff" fill-opacity=".08"/>
+  <circle cx="1090" cy="710" r="410" fill="#1d2c28" fill-opacity=".16"/>
+  <path d="M-100 360 L520 -100 M160 700 L900 -100 M520 1100 L1500 -100 M980 1200 L1700 320" stroke="#ffffff" stroke-opacity=".1" stroke-width="24"/>
+  <g transform="translate(110 840)">
+    <rect width="620" height="112" rx="56" fill="#10201c" fill-opacity=".82"/>
+    <text x="48" y="72" fill="#fff9ed" font-family="serif" font-size="46">Bread shelf</text>
+  </g>
+</svg>

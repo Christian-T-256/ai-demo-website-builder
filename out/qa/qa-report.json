@@ -1,0 +1,57 @@
+{
+  "business": {
+    "390": {
+      "viewport_width": 390,
+      "scroll_width": 390,
+      "page_height": 9360,
+      "horizontal_overflow": false,
+      "actionable_targets": 9,
+      "small_targets": [],
+      "images_without_alt": 0,
+      "screenshot": "business-390px.png",
+      "render_engine": "playwright-chromium"
+    },
+    "1280": {
+      "viewport_width": 1280,
+      "scroll_width": 1280,
+      "page_height": 6375,
+      "horizontal_overflow": false,
+      "actionable_targets": 10,
+      "small_targets": [],
+      "images_without_alt": 0,
+      "screenshot": "business-1280px.png",
+      "render_engine": "playwright-chromium"
+    }
+  },
+  "prospect": {
+    "390": {
+      "viewport_width": 390,
+      "scroll_width": 390,
+      "page_height": 2915,
+      "horizontal_overflow": false,
+      "actionable_targets": 2,
+      "small_targets": [],
+      "images_without_alt": 0,
+      "screenshot": "prospect-390px.png",
+      "render_engine": "playwright-chromium"
+    },
+    "1280": {
+      "viewport_width": 1280,
+      "scroll_width": 1280,
+      "page_height": 2512,
+      "horizontal_overflow": false,
+      "actionable_targets": 2,
+      "small_targets": [],
+      "images_without_alt": 0,
+      "screenshot": "prospect-1280px.png",
+      "render_engine": "playwright-chromium"
+    }
+  },
+  "summary": {
+    "status": "passed",
+    "mobile_failures": [],
+    "screenshots": 4,
+    "browser_measurements": true,
+    "browser_error": ""
+  }
+}

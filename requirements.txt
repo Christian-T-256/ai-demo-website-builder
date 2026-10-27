@@ -1,0 +1,4 @@
+Pillow>=12,<13
+playwright>=1,<2
+PyMuPDF>=1,<2
+pytest>=7,<8

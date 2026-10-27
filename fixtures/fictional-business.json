@@ -1,0 +1,42 @@
+{
+  "fixture_type": "fictional",
+  "name": "Northwind Bakery",
+  "category": "Neighborhood bakery",
+  "town": "Harbor Hollow",
+  "address": "18 Example Lane, Harbor Hollow, NY 00000",
+  "phone": "+1 212-555-0148",
+  "public_url": "https://demo.example.com/business",
+  "tagline": "Slow mornings start with something warm.",
+  "description": "Small batch bread, laminated pastries, and coffee baked fresh for Harbor Hollow each morning.",
+  "rating": 4.9,
+  "review_count": 184,
+  "hours": [
+    {"day": "Monday", "hours": "Closed"},
+    {"day": "Tuesday", "hours": "7:00 AM to 3:00 PM"},
+    {"day": "Wednesday", "hours": "7:00 AM to 3:00 PM"},
+    {"day": "Thursday", "hours": "7:00 AM to 3:00 PM"},
+    {"day": "Friday", "hours": "7:00 AM to 4:00 PM"},
+    {"day": "Saturday", "hours": "8:00 AM to 4:00 PM"},
+    {"day": "Sunday", "hours": "8:00 AM to 2:00 PM"}
+  ],
+  "services": [
+    {"name": "Country loaves", "description": "Naturally leavened bread with a dark crust and soft crumb."},
+    {"name": "Morning pastry", "description": "Croissants, morning buns, and seasonal fruit danishes."},
+    {"name": "Celebration cakes", "description": "Small custom cakes with simple finishes and bright flavors."},
+    {"name": "Coffee counter", "description": "Espresso, pour over coffee, tea, and house made syrups."},
+    {"name": "Lunch bakes", "description": "Savory hand pies, focaccia slices, and fresh soup."},
+    {"name": "Weekend boxes", "description": "A rotating pastry box for pickup on Saturday and Sunday."}
+  ],
+  "reviews": [
+    {"author": "Maya R.", "quote": "The rye loaf has a deep crust and stays tender for days. The counter team remembered my order on my second visit."},
+    {"author": "Theo B.", "quote": "Come early for the pear danish. The pastry is crisp, the filling is bright, and the coffee is excellent."},
+    {"author": "Nina K.", "quote": "They made a small birthday cake that looked clean, tasted fresh, and felt right for the occasion."}
+  ],
+  "photos": [
+    {"label": "Morning bake", "alt": "Abstract warm toned placeholder for a bakery oven", "color_start": "#c75f46", "color_end": "#efb85f"},
+    {"label": "Bread shelf", "alt": "Abstract green and cream placeholder for a bread display", "color_start": "#21483e", "color_end": "#7a9c6f"},
+    {"label": "Pastry case", "alt": "Abstract rose and wheat placeholder for a pastry case", "color_start": "#a84f5b", "color_end": "#e9b86d"},
+    {"label": "Coffee counter", "alt": "Abstract dark green placeholder for a coffee counter", "color_start": "#122d27", "color_end": "#597b67"},
+    {"label": "Weekend box", "alt": "Abstract coral and cream placeholder for a pastry box", "color_start": "#d36f51", "color_end": "#f0d7a1"}
+  ]
+}

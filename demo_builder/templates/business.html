@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NAME}} | {{CATEGORY}} in {{TOWN}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#17332c">
+  <link rel="canonical" href="{{PAGE_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{NAME}}">
+  <meta property="og:title" content="{{NAME}} | {{TAGLINE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta property="og:image" content="{{IMAGE_URL}}">
+  <meta property="og:image:secure_url" content="{{IMAGE_URL}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Share card for {{NAME}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{NAME}} | {{TAGLINE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="{{IMAGE_URL}}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2317332c'/%3E%3Cpath d='M18 37c7-18 21-18 28 0' fill='none' stroke='%23efb85f' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #17332c;
+      --ink-soft: #33554c;
+      --cream: #fff9ed;
+      --paper: #f5ead7;
+      --coral: #cc6b4e;
+      --gold: #efb85f;
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(23, 51, 44, .14);
+      --radius: 28px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.5;
+      padding-bottom: 74px;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    a[href], button {
+      display: inline-flex;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .demo-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 44px;
+      padding: 9px 48px 9px 16px;
+      color: var(--cream);
+      background: var(--ink);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 20;
+    }
+    .demo-note button {
+      position: absolute;
+      right: 8px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+    }
+    .site-nav {
+      position: absolute;
+      z-index: 10;
+      top: 62px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      padding: 8px 8px 8px 18px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(17, 37, 32, .72);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, .18);
+      backdrop-filter: blur(14px);
+    }
+    .brand { font-family: Georgia, serif; font-size: 17px; font-weight: 700; text-decoration: none; }
+    .nav-links { display: none; }
+    .nav-call, .primary-button, .secondary-button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .nav-call { padding: 0 18px; color: var(--ink); background: var(--gold); }
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 760px;
+      align-items: end;
+      overflow: hidden;
+      background: #17332c;
+    }
+    .hero-media, .hero-scrim { position: absolute; inset: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-scrim {
+      background: linear-gradient(180deg, rgba(12, 26, 22, .2) 18%, rgba(12, 26, 22, .94) 82%);
+    }
+    .hero-copy { position: relative; z-index: 2; padding: 150px 20px 56px; color: var(--white); }
+    .eyebrow, .section-label {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { font-family: Georgia, serif; font-weight: 500; letter-spacing: -.035em; }
+    h1 { max-width: 780px; margin-bottom: 18px; font-size: clamp(44px, 12vw, 82px); line-height: .98; }
+    .hero-copy > p { max-width: 620px; margin-bottom: 28px; color: #e6eee9; font-size: 18px; }
+    .hero-actions { display: flex; flex-direction: column; gap: 10px; }
+    .primary-button { padding: 0 24px; color: var(--ink); background: var(--gold); }
+    .secondary-button { padding: 0 24px; border: 1px solid rgba(255,255,255,.45); color: var(--white); background: rgba(255,255,255,.08); }
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid rgba(23, 51, 44, .13);
+      background: var(--paper);
+    }
+    .trust-strip div { padding: 18px 8px; text-align: center; }
+    .trust-strip div + div { border-left: 1px solid rgba(23, 51, 44, .13); }
+    .trust-strip strong { display: block; font-family: Georgia, serif; font-size: 23px; }
+    .trust-strip span { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .section { padding: 72px 20px; }
+    .section-heading { max-width: 720px; margin-bottom: 36px; }
+    .section-heading h2 { margin-bottom: 14px; font-size: clamp(38px, 9vw, 64px); line-height: 1.02; }
+    .section-heading p { max-width: 600px; color: var(--ink-soft); font-size: 17px; }
+    .services-grid { display: grid; gap: 14px; }
+    .service-card {
+      min-height: 250px;
+      padding: 26px;
+      border: 1px solid rgba(23, 51, 44, .12);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .58);
+      box-shadow: inset 0 0 0 7px rgba(255, 255, 255, .34);
+    }
+    .service-number { color: var(--coral); font-size: 12px; font-weight: 900; letter-spacing: .14em; }
+    .service-card h3 { margin: 62px 0 10px; font-family: Georgia, serif; font-size: 27px; }
+    .service-card p { margin-bottom: 0; color: var(--ink-soft); }
+    .reviews { color: var(--cream); background: var(--ink); }
+    .reviews .section-heading p { color: #b9cec6; }
+    .reviews-grid { display: grid; gap: 16px; }
+    .review-card { margin: 0; padding: 26px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+    blockquote { margin: 0 0 22px; font-family: Georgia, serif; font-size: 23px; line-height: 1.35; }
+    figcaption { color: #b9cec6; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .gallery-item { margin: 0; overflow: hidden; border-radius: 18px; background: var(--paper); }
+    .gallery-item img { width: 100%; aspect-ratio: 1 / 1.15; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .gallery-item figcaption { padding: 12px; color: var(--ink-soft); }
+    .visit { background: var(--paper); }
+    .visit-grid { display: grid; gap: 18px; }
+    .hours-card, .location-card { padding: 26px; border-radius: var(--radius); background: var(--cream); box-shadow: var(--shadow); }
+    .hours-card h3, .location-card h3 { margin-bottom: 24px; font-family: Georgia, serif; font-size: 30px; }
+    .hours-list { margin: 0; }
+    .hours-list div { display: flex; justify-content: space-between; gap: 20px; padding: 11px 0; border-bottom: 1px solid rgba(23,51,44,.1); }
+    .hours-list dt { font-weight: 800; }
+    .hours-list dd { margin: 0; color: var(--ink-soft); text-align: right; }
+    .location-art { position: relative; min-height: 220px; margin: 24px 0; overflow: hidden; border-radius: 20px; background: var(--ink); }
+    .location-art:before, .location-art:after { content: ""; position: absolute; border: 2px solid rgba(255,255,255,.18); border-radius: 50%; }
+    .location-art:before { width: 290px; height: 290px; left: -90px; top: -120px; }
+    .location-art:after { width: 230px; height: 230px; right: -60px; bottom: -120px; }
+    .pin { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; border: 15px solid var(--coral); border-radius: 50% 50% 50% 0; transform: translate(-50%, -62%) rotate(-45deg); background: var(--cream); }
+    .location-card .primary-button { width: 100%; }
+    footer { padding: 42px 20px 100px; color: #bdd0c9; background: #10231e; }
+    footer strong { display: block; margin-bottom: 8px; color: var(--cream); font-family: Georgia, serif; font-size: 22px; }
+    .mobile-bar { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; min-height: 64px; border-top: 1px solid rgba(255,255,255,.2); background: var(--ink); box-shadow: 0 -12px 30px rgba(0,0,0,.2); }
+    .mobile-bar a { display: flex; align-items: center; justify-content: center; min-height: 64px; color: var(--cream); font-weight: 900; text-decoration: none; }
+    .mobile-bar a:first-child { color: var(--ink); background: var(--gold); }
+    .reveal { opacity: 1; transform: none; }
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s cubic-bezier(.2,.7,.2,1), transform .65s cubic-bezier(.2,.7,.2,1); }
+    .js .reveal.visible { opacity: 1; transform: none; }
+    @media (min-width: 760px) {
+      body { padding-bottom: 0; }
+      .site-nav { left: 5vw; right: 5vw; }
+      .nav-links { display: flex; align-items: center; gap: 28px; margin-left: auto; margin-right: 24px; }
+      .nav-links a { font-size: 13px; font-weight: 800; text-decoration: none; }
+      .hero { min-height: 820px; }
+      .hero-scrim { background: linear-gradient(90deg, rgba(12,26,22,.92) 0%, rgba(12,26,22,.68) 46%, rgba(12,26,22,.2) 76%), linear-gradient(0deg, rgba(12,26,22,.5), transparent 50%); }
+      .hero-copy { width: min(1180px, 90vw); margin: 0 auto; padding: 190px 0 94px; }
+      .hero-actions { flex-direction: row; }
+      .section { padding: 110px 5vw; }
+      .section-inner { width: min(1180px, 100%); margin: 0 auto; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-grid { grid-template-columns: 1.35fr .8fr .8fr; }
+      .gallery-item:first-child { grid-row: span 2; }
+      .gallery-item:first-child img { aspect-ratio: 1 / 1.25; }
+      .gallery-item img { aspect-ratio: 1.25 / 1; }
+      .visit-grid { grid-template-columns: 1fr 1fr; }
+      .mobile-bar { display: none; }
+      footer { padding-bottom: 42px; }
+    }
+    @media (min-width: 1040px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{{SCHEMA}}</script>
+</head>
+<body>
+  <div class="demo-note" id="demoNote">
+    Fictional portfolio demo built from a local JSON fixture
+    <button type="button" aria-label="Dismiss demo note" id="dismissNote">X</button>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="brand" href="#top">{{NAME}}</a>
+    <div class="nav-links">
+      <a href="#services">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="nav-call" href="tel:{{PHONE_TEL}}">Call</a>
+  </nav>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media"><img src="{{HERO_SRC}}" alt="{{HERO_ALT}}" width="1600" height="1100"></div>
+      <div class="hero-scrim"></div>
+      <div class="hero-copy reveal">
+        <span class="eyebrow">{{TOWN}} | {{CATEGORY}}</span>
+        <h1>{{TAGLINE}}</h1>
+        <p>{{DESCRIPTION}}</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="tel:{{PHONE_TEL}}">Call {{PHONE_DISPLAY}}</a>
+          <a class="secondary-button" href="#services">See the menu</a>
+        </div>
+      </div>
+    </section>
+    <div class="trust-strip" aria-label="Business highlights">
+      <div><strong>{{RATING}}</strong><span>Fixture rating</span></div>
+      <div><strong>{{REVIEW_COUNT}}</strong><span>Fixture reviews</span></div>
+      <div><strong>Daily</strong><span>Baked in house</span></div>
+    </div>
+    <section class="section" id="services">
+      <div class="section-inner">
+        <header class="section-heading reveal">
+          <span class="section-label">From the ovens</span>
+          <h2>A short menu, made with care.</h2>
+          <p>Each card is rendered from structured listing data. The generator limits the count so the page stays focused.</p>
+        </header>
+        <div class="services-grid">{{SERVICES}}</div>
+      </div>
+    </section>
+    <section class="section reviews" id="reviews">
+      <div class="section-inner">
+        <header class="section-heading reveal">
+          <span class="section-label">Community notes</span>
+          <h2>Kind words from a fictional neighborhood.</h2>
+          <p>Review copy is marked as fixture data so the demo never presents invented proof as real.</p>
+        </header>
+        <div class="reviews-grid">{{REVIEWS}}</div>
+      </div>
+    </section>
+    <section class="section" id="gallery">
+      <div class="section-inner">
+        <header class="section-heading reveal">
+          <span class="section-label">A look inside</span>
+          <h2>Placeholder art that stays honest.</h2>
+          <p>The demo generates these SVG files locally. Real use can point the same photo fields at reviewed business media.</p>
+        </header>
+        <div class="gallery-grid">{{GALLERY}}</div>
+      </div>
+    </section>
+    <section class="section visit" id="visit">
+      <div class="section-inner visit-grid">
+        <article class="hours-card reveal">
+          <span class="section-label">Plan a visit</span>
+          <h3>Hours</h3>
+          <dl class="hours-list">{{HOURS}}</dl>
+        </article>
+        <article class="location-card reveal">
+          <span class="section-label">Find the shop</span>
+          <h3>{{ADDRESS}}</h3>
+          <div class="location-art" role="img" aria-label="Abstract map placeholder"><span class="pin"></span></div>
+          <a class="primary-button" href="{{DIRECTIONS_URL}}" rel="noopener">Open directions</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <strong>{{NAME}}</strong>
+    <div>{{ADDRESS}}</div>
+    <div><a href="tel:{{PHONE_TEL}}">{{PHONE_DISPLAY}}</a></div>
+    <p>Fictional business and fixture data. Generated for a public engineering portfolio.</p>
+  </footer>
+  <div class="mobile-bar" aria-label="Quick actions">
+    <a href="tel:{{PHONE_TEL}}">Call</a>
+    <a href="{{DIRECTIONS_URL}}" rel="noopener">Directions</a>
+  </div>
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealItems.forEach((item) => observer.observe(item));
+    document.getElementById('dismissNote').addEventListener('click', () => {
+      document.getElementById('demoNote').hidden = true;
+    });
+  </script>
+</body>
+</html>

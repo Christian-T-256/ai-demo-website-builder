@@ -1,0 +1,8 @@
+{
+  "business_input": "fixtures/fictional-business.json",
+  "prospect_input": "fixtures/fictional-prospect.json",
+  "output_dir": "out",
+  "public_base_url": "https://demo.example.com",
+  "deploy_provider": "vercel",
+  "deploy_project_name": "your-project-name"
+}
